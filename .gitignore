@@ -1,10 +1,11 @@
 /venv
 /.idea
+*.pyc
 /datasets/*
 /cache/*
 /output/*.tsv*
 /output/.~*
 /output/*.png
 /output/figures/*
-
+/*pyc
 

@@ -1,6 +1,6 @@
 import os
 
-ROOT_FOLDER="/specific/netapp5/gaga/hagailevi/aneuploidy/" # "/media/hag007/Data/aneuploidy" # "/specific/netapp5/gaga/hagailevi/aneuploidy/"   #"D:\\aneuploidy"
+ROOT_FOLDER="/specific/elkon/kavyap/aneuploidy/" # "/media/hag007/Data/aneuploidy" # "/specific/netapp5/gaga/hagailevi/aneuploidy/"   #"D:\\aneuploidy"
 CODE_FOLDER=os.path.join(ROOT_FOLDER,"code")
 CACHE_FOLDER=os.path.join(ROOT_FOLDER,"cache")
 OUTPUT_FOLDER=os.path.join(ROOT_FOLDER,"output")

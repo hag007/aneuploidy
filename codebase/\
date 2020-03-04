@@ -32,7 +32,7 @@ def calc_emp_pval(cur_rv, cur_dist):
     return emp_pvals
 
 def get_sample_of_permuted_scores(args):
-    
+    print "getting sample of permuted scores"
     mat, aneu_types, chr_interaction, pval_method, output = args
     s_sample=pd.Series()
     for a in np.arange(1,23):
@@ -50,7 +50,7 @@ def get_sample_of_permuted_scores(args):
     output.append(s_sample)
 
     try:
-        print "done fetching {} permutations".format(len(output))
+        print "done {} permutations".format(len(output))
     except:
         pass
 
@@ -70,7 +70,7 @@ def generate_bg_dists(aneu_types, chr_interaction, file_name, n_start, n_end, or
         mat=np.load(os.path.join(constants.CACHE_FOLDER, file_name, perm_file_format.format(file_name, f_index)))
         mat=pd.DataFrame(data=mat, columns=original.columns, index=original.index)
         params.append([mat, aneu_types, chr_interaction, pval_method, output])
-        # get_sample_of_permuted_scores(params[-1])
+
     p.map(get_sample_of_permuted_scores, params)
     p.close()
 
